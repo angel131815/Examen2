@@ -1,0 +1,27 @@
+<!Doctype html>
+<html ng-app="blogApp">
+
+		<head>
+			<title>BLOG APP</title>>
+		</head>
+		<body ng-view>
+			<div class="container">
+         			<ul  class= "listar">
+          				<li ng-repeat = "post i posts">
+          					<h4>{{post.autor}}</h4>
+          					<h4>{{post.content}}</h4>
+          					<h4>{{post.email}}</h4>
+          					<span>{{post.createdOn}}</span>
+          				</li>
+          			</ul>
+			</div>
+			<form ng-submit= "postear()">
+				<input type="text" ng-model="post.autor">
+				<textarea ng-model="post.text"> </textarea>
+				<input type="text" ng-model="post.email">
+			</form>
+
+			<script src="/angular.min.js"></script>
+			<script src="/angular-route.min.js"></script>
+		</body>
+</html>
